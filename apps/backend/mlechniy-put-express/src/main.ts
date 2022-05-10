@@ -1,15 +1,15 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
-import * as express from 'express';
+import express from 'express';
+import helmet from 'helmet';
+import userRouter from './app/users/users.router';
 
 const app = express();
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to mlechniy-put-express!' });
-});
+// Middlewares
+app.use(helmet());
+app.use(express.json());
+
+// User router
+app.use('/api/v1', userRouter);
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {

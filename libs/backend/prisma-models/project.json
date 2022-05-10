@@ -25,6 +25,14 @@
         "cwd": "libs/backend/prisma-models"
       }
     },
+    "migrate-deploy": {
+      "builder": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx prisma migrate deploy --schema ./src/prisma/schema.prisma",
+        "cwd": "libs/backend/prisma-models"
+      }
+    },
     "gen-client": {
       "builder": "@nrwl/workspace:run-commands",
       "outputs": [],
