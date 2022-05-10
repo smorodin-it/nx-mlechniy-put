@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-mlechniy-put/backend/prisma-models": [
+        "libs/backend/prisma-models/src/index.ts"
+      ],
+      "@nx-mlechniy-put/shared/api": ["libs/shared/api/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

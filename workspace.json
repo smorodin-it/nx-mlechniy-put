@@ -2,7 +2,9 @@
   "version": 2,
   "projects": {
     "backend-mlechniy-put-express": "apps/backend/mlechniy-put-express",
+    "backend-prisma-models": "libs/backend/prisma-models",
     "frontend-mlechniy-put-react": "apps/frontend/mlechniy-put-react",
-    "frontend-mlechniy-put-react-e2e": "apps/frontend/mlechniy-put-react-e2e"
+    "frontend-mlechniy-put-react-e2e": "apps/frontend/mlechniy-put-react-e2e",
+    "shared-api": "libs/shared/api"
   }
 }
