@@ -42,7 +42,7 @@
     "jest": "27.5.1",
     "nx": "14.1.4",
     "prettier": "^2.5.1",
-    "prisma": "^3.13.0",
+    "prisma": "^3.14.0",
     "react-test-renderer": "18.1.0",
     "ts-jest": "27.1.4",
     "ts-node": "9.1.1",

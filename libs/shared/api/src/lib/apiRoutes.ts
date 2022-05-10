@@ -18,6 +18,14 @@ export const apiRoutes = {
     update: (contestId = ':contestId') => `/contests/${contestId}`,
     delete: (contestId = ':contestId') => `/contests/${contestId}`,
   },
+  contestRates: {
+    // TODO: Implement routes
+    // list: () => '/contest-rates',
+    // retrieve: (contestId = ':contestId') => `/contests/${contestId}`,
+    // create: () => '/contests',
+    // update: (contestId = ':contestId') => `/contests/${contestId}`,
+    // delete: (contestId = ':contestId') => `/contests/${contestId}`,
+  },
   stories: {
     list: () => '/stories',
     retrieve: (storiesId = ':storiesId') => `/stories/${storiesId}`,
