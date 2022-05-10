@@ -1,0 +1,29 @@
+{
+  "sourceRoot": "apps/frontend/mlechniy-put-react-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/frontend/mlechniy-put-react-e2e/cypress.json",
+        "devServerTarget": "frontend-mlechniy-put-react:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "frontend-mlechniy-put-react:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/frontend/mlechniy-put-react-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["frontend-mlechniy-put-react"]
+}

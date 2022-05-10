@@ -1,0 +1,51 @@
+{
+  "sourceRoot": "apps/backend/mlechniy-put-express/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/backend/mlechniy-put-express",
+        "main": "apps/backend/mlechniy-put-express/src/main.ts",
+        "tsConfig": "apps/backend/mlechniy-put-express/tsconfig.app.json",
+        "assets": ["apps/backend/mlechniy-put-express/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/backend/mlechniy-put-express/src/environments/environment.ts",
+              "with": "apps/backend/mlechniy-put-express/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "backend-mlechniy-put-express:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/backend/mlechniy-put-express/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/backend/mlechniy-put-express"],
+      "options": {
+        "jestConfig": "apps/backend/mlechniy-put-express/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
