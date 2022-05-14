@@ -1,4 +1,4 @@
-import UsersService from 'libs/shared/api/src/lib/services/UsersService';
+import { UsersService } from '@nx-mlechniy-put/shared/api';
 import { useEffect, useState } from 'react';
 
 export function App() {

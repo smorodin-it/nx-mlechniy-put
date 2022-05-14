@@ -2,8 +2,8 @@ import { apiRoutes } from '../apiRoutes';
 
 type UsersServiceMethods = Record<keyof typeof apiRoutes.users, () => unknown>;
 
-export default class UsersService implements UsersServiceMethods {
- list = () => {
+export class UsersService {
+ static list = () => {
     console.log('hi!');
   };
 
