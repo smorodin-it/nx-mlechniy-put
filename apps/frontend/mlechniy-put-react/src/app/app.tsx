@@ -1,16 +1,12 @@
-import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import UsersService from 'libs/shared/api/src/lib/services/UsersService';
+import { useEffect, useState } from 'react';
 
 export function App() {
-  return (
-    <StyledApp>
-      <NxWelcome title="frontend-mlechniy-put-react" />
-    </StyledApp>
-  );
+  useEffect(() => {
+    UsersService.list()
+  }, []);
+
+  return <>test</>;
 }
 
 export default App;
